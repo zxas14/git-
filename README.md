@@ -61,11 +61,11 @@ yfit = svm.predict(hist_test)
 ```
 
 --------------
-## Report
-### code book size=200,  SVM parameter: C=50, gamma=1e-5 -> accuaracy:41.1%
-### code book size=600,  SVM parameter: C=50, gamma=1e-5 -> accuaracy:41.5%
+### Report
+#### code book size=200,  SVM parameter: C=50, gamma=1e-5 -> accuaracy:41.1%
+#### code book size=600,  SVM parameter: C=50, gamma=1e-5 -> accuaracy:41.5%
 
-
+-----------------------------
 ## Thesis(reference)
 ### Beyond Bags of Features: Spatial Pyramid Matching for Recognizing Natural Scene Categories
 
