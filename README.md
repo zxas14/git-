@@ -4,12 +4,12 @@ pattern recognition: Bag of visual words(BOVW)
 
 ## contents
 
-# data load(from kaggle)
+## data load(from kaggle)
 ``` ! kaggle competitions download -c 2019-ml-finalproject ```
 
 ```! unzip 2019-ml-finalproject.zip ```
 
-# sift function(from disccusion by xown3197)
+## sift function(from disccusion by xown3197)
 ```def dense_sitf_each(gray):
   sift=cv2.xfeatures2d_SIFT.create()
 
@@ -24,10 +24,10 @@ pattern recognition: Bag of visual words(BOVW)
   
   return kp, des 
   ```
-  # descriptor
+  ## descriptor
   ``` descriptors= np.vstack(des for des in tqdm(train_des)) ```
   
-  # clustering(code book)(from disccusion by xown3197)
+  ## clustering(code book)(from disccusion by xown3197)
   ``` from sklearn.cluster import MiniBatchKMeans
 codebooksize=200
 
@@ -37,7 +37,7 @@ codebook = Kmeas.cluster_centers_
 ```
 
 
-# histogram
+## histogram
 ```from scipy.cluster.vq import vq
 
 hist=[]
@@ -50,7 +50,7 @@ for i in tqdm(range(len(train_des))):
   hist.append(word_hist)
   ```
   
-# SVM
+## SVM
   ```
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
@@ -60,7 +60,7 @@ svm = SVC(kernel='rbf',C=50,gamma=1e-5 ,class_weight='balanced').fit(x_train,y_t
 yfit = svm.predict(hist_test)
 ```
 
-# Report
+## Report
 ### code book size=200,  SVM parameter: C=50, gamma=1e-5 -> accuaracy:41.1%
 
 
