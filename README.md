@@ -66,5 +66,5 @@ yfit = svm.predict(hist_test)
 
 
 ## Thesis(reference)
-Beyond Bags of Features: Spatial Pyramid Matching for Recognizing Natural Scene Categories
+### Beyond Bags of Features: Spatial Pyramid Matching for Recognizing Natural Scene Categories
 
